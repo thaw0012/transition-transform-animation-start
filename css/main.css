@@ -35,3 +35,44 @@
 	background-color: #e89380;
 	/*orange*/
 }
+
+/*******************************************
+			transitions
+*******************************************/
+
+.transition .b1 {
+	transition: width 1s ease-in-out;
+}
+
+.transition .b1:hover {
+	width: 400px;
+	/* height: 300px; */
+}
+
+.transition .b2 {
+	transition: width 1s, height 2s;
+	transition-timing-function: ease-out;
+	transition-delay: .5s;
+}
+
+.transition .b2:hover {
+	width: 250px;
+	height: 250px;
+}
+
+.transition .b3 {
+	transition: 1s cubic-bezier(.31,.79,.9,.04) .5s;
+}
+
+.transition .b3:hover {
+	transform: rotate(80deg);
+}
+
+.transition .b4 {
+	transition: all 2s;
+}
+
+.transition .b4:hover {
+	background-color: #cc8dcc;
+	border-radius: 30px;
+}
