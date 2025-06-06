@@ -37,7 +37,7 @@
 }
 
 /*******************************************
-			transitions
+			Transitions
 *******************************************/
 
 .transition .b1 {
@@ -78,7 +78,7 @@
 }
 
 /*******************************************
-			transform
+			Transforms
 *******************************************/
 
 /* .transform .b1:hover {
@@ -107,4 +107,78 @@
 
 .transform .b4:hover {
 	transform: skewX(0) skewY(0);
+}
+
+/*******************************************
+			Animations
+*******************************************/
+
+@keyframes changeColor {
+	from {
+		background-color: #cc80cc;
+	}
+
+	to {
+		background-color: #e89380;
+	}
+}
+
+.animation .b1 {
+	animation-name: changeColor;
+	animation-duration: 2s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes moveAround {
+	0%{
+		transform: translate(0,0);
+	}
+
+	25%{
+		transform: translate(200px,0);
+	}
+
+	50%{
+		transform: translate(200px,200px);
+	}
+
+	75%{
+		transform: translate(0,200px);
+	}
+
+	100%{
+		transform: translate(0,0);
+	}
+}
+
+.animation .b2 {
+	animation-name: moveAround;
+	animation-duration: 4s;
+	animation-delay: 2s;
+	animation-iteration-count: 3; /* this is where you can make ur animation infinite  */
+	animation-direction: alternate;
+}
+
+@keyframes transformMe {
+	0% {
+		transform: scale(.05) rotateX(0) translate(0);
+	}
+
+	100% {
+		transform: scale(1) rotateX(180deg) translate(600px);
+	}
+}
+
+.animation .b3 {
+	animation: transformMe 1.5s 11 alternate forwards ease-in-out; /* the 11 is how many times it moves */
+}
+
+.animation .b4 {
+	animation: transformMe 1.5s 3s infinite alternate cubic-bezier(0.19, 1, 0.22, 1); 
+	/* the 3 is the delay  */
+}
+
+.animation .b4:hover {
+	animation-play-state: paused;
 }
