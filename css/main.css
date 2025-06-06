@@ -76,3 +76,35 @@
 	background-color: #cc8dcc;
 	border-radius: 30px;
 }
+
+/*******************************************
+			transform
+*******************************************/
+
+/* .transform .b1:hover {
+	transition: 3s transform;
+} */
+
+.transform .b1:hover {
+	transform: translate(20px, 30px);
+}
+
+.transform .b2:hover {
+	transform: scale(2);
+}
+
+.transform .b3:hover {
+	transform: rotate(45deg);
+}
+
+.transform .b3 {
+	transform-origin: right top;
+}
+
+.transform .b4 {
+	transform: skewX(5deg) skewY(30deg);
+}
+
+.transform .b4:hover {
+	transform: skewX(0) skewY(0);
+}
